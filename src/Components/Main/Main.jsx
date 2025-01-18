@@ -2,14 +2,14 @@ import React from 'react';
 import './Main.css';
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from 'react-icons/hi';
 import imgSrc from '../../assets/img_1.jpg';
-import imgSrc2 from '../../Assets/img_2.jpg';
-import imgSrc3 from '../../Assets/img_3.jpg';
-import imgSrc4 from '../../Assets/img_4.webp';
-import imgSrc5 from '../../Assets/img_5.jpeg';
-import imgSrc6 from '../../Assets/img_6.jpeg';
-import imgSrc7 from '../../Assets/img_7.jpg';
-import imgSrc8 from '../../Assets/img_8.jpg';
-import imgSrc9 from '../../Assets/img_9.jpg';
+import imgSrc2 from '../../assets/img_2.jpg';
+import imgSrc3 from '../../assets/img_3.jpg';
+import imgSrc4 from '../../assets/img_4.webp';
+import imgSrc5 from '../../assets/img_5.jpeg';
+import imgSrc6 from '../../assets/img_6.jpeg';
+import imgSrc7 from '../../assets/img_7.jpg';
+import imgSrc8 from '../../assets/img_8.jpg';
+import imgSrc9 from '../../assets/img_9.jpg';
 const Data = [
   {
     id: 1,
