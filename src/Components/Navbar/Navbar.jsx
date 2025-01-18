@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { VscCompassDot } from "react-icons/vsc";
 import { TbGridDots } from "react-icons/tb";
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -14,63 +13,58 @@ const Navbar = () => {
     <section className="navBarSection">
       <header className="header">
         <div className="logoDiv">
-          <Link to="/" className="logo">
+          <a href="/" className="logo">
             <h1>
               <VscCompassDot size={30} style={{ marginRight: "0.5rem" }} />
               TravYo.
             </h1>
-          </Link>
+          </a>
         </div>
-        <nav className={`navbar ${isOpen ? "active" : ""}`}>
+        <div className={`navbar ${isOpen ? "active" : ""}`}>
           <ul className="navLists">
             <li className="navItem">
-              <Link to="/" className="navLink">
+              <a href="#" className="navLink">
                 Home
-              </Link>
+              </a>
             </li>
             <li className="navItem">
-              <Link to="/packages" className="navLink">
+              <a href="#" className="navLink">
                 Packages
-              </Link>
+              </a>
             </li>
             <li className="navItem">
-              <Link to="/shop" className="navLink">
+              <a href="#" className="navLink">
                 Shop
-              </Link>
+              </a>
             </li>
             <li className="navItem">
-              <Link to="/about" className="navLink">
+              <a href="#" className="navLink">
                 About
-              </Link>
+              </a>
             </li>
             <li className="navItem">
-              <Link to="/pages" className="navLink">
-                Pages
-              </Link>
+              <a href="#" className="navLink">
+               Pages
+              </a>
             </li>
             <li className="navItem">
-              <Link to="/news" className="navLink">
+              <a href="#" className="navLink">
                 News
-              </Link>
+              </a>
             </li>
             <li className="navItem">
-              <Link to="/contact" className="navLink">
+              <a href="#" className="navLink">
                 Contact
-              </Link>
+              </a>
             </li>
             <li className="navItem">
-              <Link to="/booking" className="navLink button">
+              <a href="#" className="navLink button">
                 Book Now
-              </Link>
+              </a>
             </li>
           </ul>
-        </nav>
-        <button 
-          className="hamburger" 
-          onClick={toggleMenu}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-        >
+        </div>
+        <button className="hamburger" onClick={toggleMenu}>
           {isOpen ? 
             <AiFillCloseCircle style={{ color: "#2ecc71" }} /> : 
             <TbGridDots style={{ color: "#2ecc71" }} />
