@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import video2 from '../../Assets/video2.mp4';
+import video2 from '../../assets/video2.mp4';
 import { FiSend } from 'react-icons/fi';
 import { VscCompassDot } from 'react-icons/vsc';
 import { AiFillInstagram, AiFillYoutube, AiOutlineTwitter } from 'react-icons/ai';
