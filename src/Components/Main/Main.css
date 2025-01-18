@@ -1,0 +1,234 @@
+:root {
+    --primary-color: rgba(1, 128, 1, 0.996);
+    --secondary-color: rgba(19, 163, 19, 0.8);
+    --gradient-color: linear-gradient(to right, rgba(1, 128, 1, 0.996), rgba(50, 205, 50, 0.8));
+    --hover-gradient-color: linear-gradient(to right, rgba(50, 205, 50, 0.8), rgba(1, 128, 1, 0.996));
+    --white-color: #ffffff;
+    --black-color: hsl(201, 33%, 16%);
+    --text-color: hsl(240, 4%, 36%);
+    --white-color-dream: hsl(8, 0%, 93%);
+    --grey-text: rgb(196, 198, 190);
+    --input-color: rgb(239, 239, 239);
+    --body-color: rgb(199, 249, 207);
+    --card-bg: rgb(225, 225, 235);
+    --cardHover: rgb(255, 255, 255);
+}
+
+
+
+.main {
+    width: 100%;
+}
+
+
+.sectTitle {
+    text-align: center; 
+    margin-bottom: 30px; 
+  }
+  
+ 
+  .sectTitle .title {
+    position: relative;
+    display: inline-block; 
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+ 
+  .sectTitle .title::after {
+    position: absolute;
+    content: '';
+    background: var(--secondary-color); 
+    height: 4px; 
+    width: 100%; 
+    left: 0;
+    bottom: -5px; 
+  }
+
+.secContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible columns for all screen sizes */
+    gap: 2rem; 
+    justify-content: center; 
+}
+
+
+.singleDestination {
+    background-color: var(--card-bg);
+    height: 100vh;
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.54);
+    border-radius: 10px; 
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.singleDestination:hover {
+    background-color: var(--cardHover);
+    box-shadow: 0 4px 8px rgba(85, 85, 114, 0.549);
+    transform: scale(1.02); 
+}
+
+
+.imageDiv {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageDiv img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.imageDiv:hover img {
+    transform: scale(1.1); 
+}
+
+
+.cardInfo {
+    padding: .5rem;
+}
+
+.cardInfo .desTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black-color);
+    margin-bottom: 0.5rem;
+}
+
+.cardInfo .desc {
+    font-size: 1rem; 
+    color: var(--text-color);
+}
+
+
+.cardInfo .fees {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1.5px solid var(--grey-text);
+    border-bottom: 1.5px solid var(--grey-text);
+}
+
+.cardInfo .price {
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.cardInfo .grade small {
+    background: var(--gradient-color);
+    border-radius: 1rem;
+    color: var(--white-color);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+.cardInfo .btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white-color);
+    background: var(--gradient-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cardInfo .btn:hover {
+    background: var(--hover-gradient-color);
+}
+.btn{
+    padding: .8rem;
+    margin-top: 1rem;
+    color: var(--white-color);
+    font-size: 15px;
+    font-weight: 600;
+    justify-content: space-between;
+    gap: .5rem;
+}
+.btn
+.icon{
+ color: white;
+ align-self: center;
+ font-size: 18px;
+}
+
+
+
+@media (min-width: 1024px) {
+    .secContent {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 2.5rem; 
+    }
+
+    .imageDiv {
+        height: 300px; 
+    }
+
+    .cardInfo .desTitle {
+        font-size: 1.8rem; 
+    }
+
+    .cardInfo .desc {
+        font-size: 1.1rem; 
+    }
+}
+@media (max-width: 768px) {
+    .secContent {
+      display: grid;
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+    }
+  
+    .imageDiv {
+      height: 250px; 
+    }
+  
+    .singleDestination {
+      margin-bottom: 20px; 
+    }
+  
+    .cardInfo {
+      padding: 15px; 
+    }
+  
+    .desTitle {
+      font-size: 1.2rem; 
+    }
+  
+    .price h5 {
+      font-size: 1rem; 
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .imageDiv {
+      height: 220px; 
+    }
+  
+    .desTitle {
+      font-size: 1rem; 
+    }
+  
+    .price h5 {
+      font-size: 0.9rem; 
+    }
+  
+    .desc p {
+      font-size: 0.9rem; 
+    }
+  }

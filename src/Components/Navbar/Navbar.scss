@@ -1,0 +1,130 @@
+:root {
+    --primary-color: rgba(1, 128, 1, 0.996);
+    --secondary-color: rgba(19, 163, 19, 0.8);
+    --gradient-color: linear-gradient(to right, rgba(1, 128, 1, 0.996), rgba(50, 205, 50, 0.8));
+    --hover-gradient-color: linear-gradient(to right, rgba(50, 205, 50, 0.8), rgba(1, 128, 1, 0.996));
+    --white-color: #ffffff;
+    --black-color: hsl(201, 33%, 16%);
+    --text-color: hsl(240, 4%, 36%);
+    --white-color-dream: hsl(8, 0%, 93%);
+    --grey-text: rgb(196, 198, 190);
+    --input-color: rgb(239, 239, 239);
+    --body-color: rgb(199, 249, 207); 
+    --card-bg: rgb(225, 225, 235);
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  .navBarSection {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logoDiv .logo h1 {
+    display: flex;
+    align-items: center;
+    color: #2a2a2a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .navLists {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .navLink {
+    color: #2a2a2a;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .navLink:hover {
+    background: #f0f0f0;
+    color: #007bff;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+
+ 
+ .button {
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background: #0056b3;
+ }
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+      z-index: 100;
+    }
+  
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      transition: 0.3s ease-in-out;
+      padding-top: 4rem;
+    }
+  
+    .navbar.active {
+      left: 0;
+    }
+  
+    .navLists {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navItem {
+      margin: 1rem 0;
+    }
+  }

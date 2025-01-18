@@ -1,0 +1,196 @@
+:root {
+    --primary-color: rgba(1, 128, 1, 0.996);
+    --secondary-color: rgba(19, 163, 19, 0.8);
+    --gradient-color: linear-gradient(to right, rgba(1, 128, 1, 0.996), rgba(50, 205, 50, 0.8));
+    --hover-gradient-color: linear-gradient(to right, rgba(50, 205, 50, 0.8), rgba(1, 128, 1, 0.996));
+    --white-color: #ffffff;
+    --black-color: hsl(201, 33%, 16%);
+    --text-color: hsl(240, 4%, 36%);
+    --white-color-dream: hsl(8, 0%, 93%);
+    --grey-text: rgb(196, 198, 190);
+    --input-color: rgba(223, 219, 219, 0.817);
+    --body-color: rgb(199, 249, 207);
+    --card-bg: rgb(225, 225, 235);
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+}
+
+.homeContent {
+    width: 100%;
+    height: max-content;
+    padding: 6rem 1.5rem 2rem;
+    display: flex;
+    row-gap: 2rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--white-color);
+    z-index: 100;
+    
+    .textDiv {
+        padding: 1.5rem 0;
+    }
+
+    .smallText {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .homeTitle {
+        position: relative;
+        font-size: 1.8rem;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .cardDiv {
+        position: relative;
+        padding: 0.8rem 1.2rem;
+        margin: 0rem .2rem;
+        background: var(--white-color);
+        border-radius: 8px;
+        gap: .2rem;
+        
+        label {
+            display: block;
+            color: var(--text-color);
+            padding-bottom: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .label_total {
+            justify-content: space-between;
+            align-items: center;
+            .total {
+                color: var(--text-color);
+                font-size: 16px;
+                padding-bottom: 8px;
+            }
+        }
+
+        .input {
+            height: 36px;
+            padding: 0 1rem;
+            background: var(--input-color);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid transparent;
+            width: 90%; 
+            max-width: 350px; 
+            margin: auto; 
+        }
+
+        input {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-color);
+            padding: 8px 0;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                font-size: 12px;
+                color: var(--grey-text);
+            }
+
+            &:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 8px var(--primary-color);
+            }
+        }
+
+        .icon1 {
+            color: white;
+            font-size: 20px; 
+        }
+
+        .icon {
+            font-size: 30px; 
+            color: var(--primary-color) !important;
+            margin-left: 10px;
+        }
+
+        .input[type="range"] {
+            background: var(--primary-color);
+            cursor: pointer;
+            color: var(--text-color);
+        }
+    }
+
+    .searchOptions {
+        position: absolute;
+        background: var(--gradient-color);
+        width: max-content;
+        bottom: -1.5rem;
+        column-gap: .10rem;
+        padding: .5rem 2.5rem;
+        border-radius: 2.5rem;
+        height: 40px;
+        left: 50%;
+        transform: translate(-50%);
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--hover-gradient-color);
+        }
+
+        span {
+            font-size: 12px;
+        }
+    }
+
+    .homeFooterIcons {
+        width: 100%;
+        justify-content: space-between;
+
+        .icon2 {
+            font-size: 60px;
+            color: white;
+            margin: 0px 5px;
+            padding-bottom: 40px;
+            font-weight: 600;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
+    }
+}

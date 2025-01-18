@@ -1,0 +1,53 @@
+:root {
+    --primary-color: rgba(1, 128, 1, 0.996);
+    --secondary-color: rgba(19, 163, 19, 0.8);
+    --gradient-color: linear-gradient(to right, rgba(1, 128, 1, 0.996), rgba(50, 205, 50, 0.8));
+    --hover-gradient-color: linear-gradient(to right, rgba(50, 205, 50, 0.8), rgba(1, 128, 1, 0.996));
+    --white-color: #ffffff;
+    --black-color: hsl(201, 33%, 16%);
+    --text-color: hsl(240, 4%, 36%);
+    --white-color-dream: hsl(8, 0%, 93%);
+    --grey-text: rgb(196, 198, 190);
+    --input-color: rgb(239, 239, 239);
+    --body-color: rgb(199, 249, 207); 
+    --card-bg: rgb(225, 225, 235);
+}
+.home{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+    .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgb(47, 150, 127);
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+    }
+    video{
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         top:0;
+         bottom: 0;
+        object-fit: cover;
+    }
+    .homeContent{
+    width: 100%;
+    height: max-content;
+    padding: 8rem 1.5rem 3rem;
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--white-color);
+    z-index: 100;
+    }

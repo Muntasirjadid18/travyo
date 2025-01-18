@@ -1,0 +1,50 @@
+/* Define CSS variables */
+:root {
+    --primary-color: rgba(1, 128, 1, 0.996);
+    --secondary-color: rgba(19, 163, 19, 0.8);
+    --black-color: #000;
+    --text-color: hsl(240, 4%, 36%);
+}
+
+/* Main styles */
+.main {
+    width: 100%;
+}
+
+/* Title styles */
+.sectTitle .title {
+    position: relative;
+    width: max-content;
+    color: var(--text-color);
+    z-index: 2;
+}
+
+/* Title underlining styles */
+.sectTitle .title::after {
+    position: absolute;
+    content: '';
+    background: var(--secondary-color);
+    height: 5px;
+    width: 120px;
+    right: 0;
+    bottom: 5px;
+    z-index: -1;
+}
+
+/* Content container styles */
+.secContent {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Single destination styles */
+.secContent .singleDestination {
+    height: 100%;
+    display: grid;
+    row-gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    background-color: var(--black-color); /* Should apply black color */
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.54);
+}

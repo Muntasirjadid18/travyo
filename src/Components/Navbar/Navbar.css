@@ -1,0 +1,153 @@
+:root {
+  --primary-color: rgba(2, 96, 2, 0.996);
+  --secondary-color: rgba(28, 161, 28, 0.8);
+  --gradient-color: linear-gradient(to right, rgba(1, 128, 1, 0.996), rgba(50, 205, 50, 0.8));
+  --hover-gradient-color: linear-gradient(to right, rgba(50, 205, 50, 0.8), rgba(1, 128, 1, 0.996));
+  --white-color: #ffffff;
+  --body-color: rgb(215, 233, 219);
+}
+
+.navBarSection {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background:var(--body-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+}
+
+.logoDiv {
+  display: flex;
+  align-items: center;
+  flex: 1; 
+}
+
+.logoDiv .logo h1 {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logoDiv .logo h1:hover {
+  color: var(--secondary-color);
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+  flex: 2; 
+  transition: 0.3s ease-in-out;
+}
+
+.navLists {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navLink {
+  color: #4A4A4A;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  background: #f0f0f0;
+  color: var(--secondary-color);
+}
+
+
+.navLink.button a {
+  color: white;
+  background: var(--gradient-color);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  transition: background 0.3s ease;
+}
+
+.navLink.button a:hover {
+  background: var(--hover-gradient-color);
+}
+
+
+.hamburger {
+  display: none; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  flex: 0; 
+}
+.navLink.button {
+  display: inline-block; 
+  padding: 0.8rem 1.5rem;
+  background: var(--gradient-color);
+  color: white; 
+  font-weight: 500; 
+  text-decoration: none; 
+  border-radius: 2rem; 
+  white-space: nowrap; 
+  transition: background 0.3s ease;
+}
+
+.navLink.button:hover {
+  background: var(--hover-gradient-color); 
+  color: white; 
+}
+
+
+body {
+  background: var(--body-color);
+}
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 100;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100vh;
+    background: white;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+
+  .navbar.active {
+    left: 0; 
+  }
+
+  .navLists {
+    flex-direction: column; 
+    gap: 1.5rem;
+  }
+}

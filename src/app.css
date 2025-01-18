@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --primary-color: rgba(1, 128, 1, 0.996);
+    --secondary-color: rgba(19, 163, 19, 0.8);
+    --gradient-color: linear-gradient(to right, rgba(1, 128, 1, 0.996), rgba(50, 205, 50, 0.8));
+     --hover-gradient-color: linear-gradient(to right, rgba(50, 205, 50, 0.8), rgba(1, 128, 1, 0.996));
+    --white-color: #ffffff;
+    --black-color: hsl(201, 33%, 16%);
+    --text-color: hsl(240, 4%, 36%);
+    --white-color-dream: hsl(8, 0%, 93%);
+    --grey-text: rgb(196, 198, 190);
+    --input-color: rgb(239, 239, 239);
+    --body-color: rgb(199, 249, 207); 
+    --card-bg: rgb(225, 225, 235);
+}
+.logo h1 {
+    color: var(--primary-color); 
+    font-size: 2rem;         
+    font-weight: 800;           
+    text-transform:none;  
+    transition: color 0.3s ease; 
+}
+
+.logo h1:hover {
+    color: var(--secondary-color); 
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.section{
+    padding: 4rem 0 2rem;
+}
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.icon {
+    font-size: 2rem;
+    color: black;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.grid{
+    display: grid;
+    align-items: center;
+}
+.navLink {
+    color: #4A4A4A; 
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: var(--secondary-color); 
+}
+
+.btn {
+    color: white;
+  background: var(--gradient-color);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn a {
+    color: var(--white-color); 
+    font-weight: 700; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    display: inline-block; 
+}
+
+.btn:hover {
+    background: var(--hover-gradient-color);
+}
+img,video{
+    width: 100%;
+    height: auto;
+}
+input{
+    font-size: 100%;
+}
+
