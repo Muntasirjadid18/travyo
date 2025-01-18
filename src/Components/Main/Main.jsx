@@ -1,15 +1,15 @@
 import React from 'react';
 import './Main.css';
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from 'react-icons/hi';
-import imgSrc from '../../Assets/img(1).jpg';
-import imgSrc2 from '../../Assets/img(2).jpg';
-import imgSrc3 from '../../Assets/img(3).jpg';
-import imgSrc4 from '../../Assets/img(4).webp';
-import imgSrc5 from '../../Assets/img(5).jpeg';
-import imgSrc6 from '../../Assets/img(6).jpeg';
-import imgSrc7 from '../../Assets/img(7).jpg';
-import imgSrc8 from '../../Assets/img(8).jpg';
-import imgSrc9 from '../../Assets/img(9).jpg';
+import imgSrc from '../../assets/img_1.jpg';
+import imgSrc2 from '../../Assets/img_2.jpg';
+import imgSrc3 from '../../Assets/img_3.jpg';
+import imgSrc4 from '../../Assets/img_4.webp';
+import imgSrc5 from '../../Assets/img_5.jpeg';
+import imgSrc6 from '../../Assets/img_6.jpeg';
+import imgSrc7 from '../../Assets/img_7.jpg';
+import imgSrc8 from '../../Assets/img_8.jpg';
+import imgSrc9 from '../../Assets/img_9.jpg';
 const Data = [
   {
     id: 1,
