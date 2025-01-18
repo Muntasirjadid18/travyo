@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { VscCompassDot } from "react-icons/vsc";
 import { TbGridDots } from "react-icons/tb";
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -13,66 +14,63 @@ const Navbar = () => {
     <section className="navBarSection">
       <header className="header">
         <div className="logoDiv">
-          <a href="/" className="logo">
+          <Link to="/" className="logo">
             <h1>
               <VscCompassDot size={30} style={{ marginRight: "0.5rem" }} />
               TravYo.
             </h1>
-          </a>
+          </Link>
         </div>
-        <div className={`navbar ${isOpen ? "active" : ""}`}>
+        <nav className={`navbar ${isOpen ? "active" : ""}`}>
           <ul className="navLists">
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink">
+              <Link to="/" className="navLink">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink">
+              <Link to="/packages" className="navLink">
                 Packages
-              </a>
+              </Link>
             </li>
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink">
+              <Link to="/shop" className="navLink">
                 Shop
-              </a>
+              </Link>
             </li>
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink">
+              <Link to="/about" className="navLink">
                 About
-              </a>
+              </Link>
             </li>
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink">
-               Pages
-              </a>
+              <Link to="/pages" className="navLink">
+                Pages
+              </Link>
             </li>
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink">
+              <Link to="/news" className="navLink">
                 News
-              </a>
+              </Link>
             </li>
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink">
+              <Link to="/contact" className="navLink">
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="navItem">
-            // eslint-disable-next-line
-              <a href="#" className="navLink button">
+              <Link to="/booking" className="navLink button">
                 Book Now
-              </a>
+              </Link>
             </li>
           </ul>
-        </div>
-        <button className="hamburger" onClick={toggleMenu}>
+        </nav>
+        <button 
+          className="hamburger" 
+          onClick={toggleMenu}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+        >
           {isOpen ? 
             <AiFillCloseCircle style={{ color: "#2ecc71" }} /> : 
             <TbGridDots style={{ color: "#2ecc71" }} />
